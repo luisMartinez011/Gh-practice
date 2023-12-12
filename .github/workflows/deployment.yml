@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run tests
-        uses: npm run test
+        run: npm run test
 
   lint:
     defaults:
@@ -37,4 +37,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Lint
-        uses: npm run lint
+        run: npm run lint
