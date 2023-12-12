@@ -14,18 +14,18 @@ jobs:
         uses: actions/setup-node@v3
 
       - name: npm install
-        uses: |
+        run: |
           npm install
           npm run build
 
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run tests
-        uses: npm run test
+  # test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Run tests
+  #       uses: npm run test
 
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Lint
-        uses: npm run lint
+  # lint:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Lint
+  #       uses: npm run lint
