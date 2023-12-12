@@ -21,14 +21,20 @@ jobs:
           npm install
           npm run build
 
-  # test:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Run tests
-  #       uses: npm run test
+  test:
+    defaults:
+      run:
+        working-directory: app
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run tests
+        uses: npm run test
 
-  # lint:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Lint
-  #       uses: npm run lint
+  lint:
+    defaults:
+      run:
+        working-directory: app
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint
+        uses: npm run lint
