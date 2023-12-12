@@ -2,7 +2,7 @@ name: first-worflow
 
 run-name: ${{ github.actor }} is learning GitHub Actions
 
-on: [push]
+on: [push, workflow_dispatch]
 
 jobs:
   build:
