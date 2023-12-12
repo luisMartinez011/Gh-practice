@@ -1,11 +1,14 @@
 name: first-worflow
 
-run-name: ${{ github.actor }} is learning GitHub Actions
+run-name: nodejs flow
 
 on: [push, workflow_dispatch]
 
 jobs:
   build:
+    defaults:
+      run:
+        working-directory: app
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
